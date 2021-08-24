@@ -1,0 +1,81 @@
+@font-face {
+    font-family: Allison;
+    src: url('./Allison.ttf');
+}
+
+@font-face {
+    font-family: Garamond;
+    src: url('./fonts/Garamond.ttf');
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url('./fonts/Roboto.ttf');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    cursor: url('./img/pizza-cursor.png'), auto;
+}
+
+h1 {
+    font-family: Allison;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 1em;
+
+    width: 10rem;
+    cursor: pointer;
+
+    color: white;
+    background-color: black;
+    border: solid 3px white;
+    padding: 1rem 2rem 1rem 2rem;
+    margin-top: 1em;
+
+    transition: background-color 300ms, color 300ms;
+
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+}
+
+#about {
+    display: flex;
+    flex-direction: row;
+}
+
+.description {
+    font-family: Garamond;
+}
+
+.left-part {
+    color: white;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding-right: 2rem;
+    flex-grow: 1;
+}
+
+.right-part img{
+    height: 100vh;
+    width: 70vh;
+}
+
+@media only screen and (min-width: 800px) {
+    .left-part {
+        padding: 10rem;
+    }
+}
