@@ -1,4 +1,4 @@
 import './style.css';
-import createHomepage from "./createPage";
+import createHomepage from './createPage';
 
 createHomepage.homepage();

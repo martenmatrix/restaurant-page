@@ -9,15 +9,15 @@ module.exports = {
     clean: true,
   },
 
-  modules: {
+  module: {
       rules: [
-          {
-            test: /\.css$/i,
-            use: ['style-loader', 'css-loader'],
-          },
-           {
+            {
+             test: /\.css$/i,
+             use: ['style-loader', 'css-loader'],
+            },
+            {
             test: /\.(png|svg|jpg|jpeg|gif)$/i,
-            use: 'asset/resource',
+            type: 'asset/resource',
            },
            {
             test: /\.(woff|woff2|eot|ttf|otf)$/i,
