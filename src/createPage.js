@@ -30,7 +30,7 @@ const createPage = (function () {
         about.appendChild(rightPart);
 
         const image = document.createElement('img');
-        image.src = './pizza-horizontal.jpg';
+        image.src = './img/pizza-horizontal.jpg';
         image.type = 'img/jpg';
         rightPart.appendChild(image);
 
