@@ -5,6 +5,7 @@ const createPage = (function () {
 
         const about = document.createElement('about');
         about.id = 'about';
+        contentDiv.appendChild(about);
 
     
         const leftPart = document.createElement('div');
@@ -34,8 +35,8 @@ const createPage = (function () {
         image.type = 'img/jpg';
         rightPart.appendChild(image);
 
-        contentDiv.appendChild(leftPart);
-        contentDiv.appendChild(rightPart);
+        about.appendChild(leftPart);
+        about.appendChild(rightPart);
     };
 
     return {homepage};
