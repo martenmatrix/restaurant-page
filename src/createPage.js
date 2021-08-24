@@ -1,3 +1,5 @@
+import imageOfRestaurant from './img/pizza-horizontal.jpg';
+
 const createPage = (function () {
     
     function homepage() {
@@ -31,7 +33,7 @@ const createPage = (function () {
         about.appendChild(rightPart);
 
         const image = document.createElement('img');
-        image.src = './img/pizza-horizontal.jpg';
+        image.src = imageOfRestaurant;
         image.type = 'img/jpg';
         rightPart.appendChild(image);
 
