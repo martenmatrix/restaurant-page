@@ -1,1 +1,5 @@
 node_modules
+
+#Ignore dist but not the index.html
+dist
+!index.html
