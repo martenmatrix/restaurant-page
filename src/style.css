@@ -139,11 +139,14 @@ button:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    margin-left: 2em;
 }
 
 .product img {
     margin-top: 0.5rem;
     background-color: rgba(128, 128, 128, 0.2);
+    width: 125px;
 }
 
 .product p {
