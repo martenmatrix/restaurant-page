@@ -1,18 +1,28 @@
 import imageOfRestaurant from './img/pizza-horizontal.jpg';
 
 const createPage = (function () {
+
+    //create empty spaces
+    const contentDiv = document.querySelector('#content');
+
+    const about = document.createElement('about');
+    about.id = 'about';
+    contentDiv.appendChild(about);
+
+    const leftPart = document.createElement('div');
+    leftPart.classList.add('left-part');
+    about.appendChild(leftPart);
+
+    const rightPart = document.createElement('div');
+    rightPart.classList.add('right-part');
+    about.appendChild(rightPart);
+
+    const image = document.createElement('img');
+    image.src = imageOfRestaurant;
+    image.type = 'img/jpg';
+    rightPart.appendChild(image);
     
     function homepage() {
-        const contentDiv = document.querySelector('#content');
-
-        const about = document.createElement('about');
-        about.id = 'about';
-        contentDiv.appendChild(about);
-
-    
-        const leftPart = document.createElement('div');
-        leftPart.classList.add('left-part');
-        about.appendChild(leftPart);
 
         const header = document.createElement('h1');
         header.textContent = "Marten's Pizza Restaurant";
@@ -27,22 +37,8 @@ const createPage = (function () {
         button.textContent = 'Book now';
         leftPart.appendChild(button);
 
-
-        const rightPart = document.createElement('div');
-        rightPart.classList.add('right-part');
-        about.appendChild(rightPart);
-
-        const image = document.createElement('img');
-        image.src = imageOfRestaurant;
-        image.type = 'img/jpg';
-        rightPart.appendChild(image);
-
         about.appendChild(leftPart);
         about.appendChild(rightPart);
-    };
-
-    function about() {
-
     };
 
     return {homepage};
