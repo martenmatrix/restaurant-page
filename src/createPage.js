@@ -25,7 +25,7 @@ const createPage = (function () {
     //create menu
     const menu = document.createElement('ul');
     menu.id = 'menu';
-    const menuSections = ['Home', 'About', 'Menu'];
+    const menuSections = ['Home', 'Contact', 'Menu'];
 
     menuSections.forEach((section, index) => {
         const sectionToCreate = document.createElement('li');
@@ -65,7 +65,15 @@ const createPage = (function () {
         deleteSection.textContent = '';
     };
 
-    return {homepage, deleteLeftPart};
+    function contact() {
+
+    };
+
+    function foodMenu() {
+
+    };
+
+    return {homepage, contact, foodMenu, deleteLeftPart};
 })();
 
 export default createPage;
