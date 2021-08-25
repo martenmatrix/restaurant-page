@@ -41,6 +41,10 @@ const createPage = (function () {
         about.appendChild(rightPart);
     };
 
+    function about() {
+
+    };
+
     return {homepage};
 })();
 

@@ -12,6 +12,10 @@ module.exports = {
   },
 
   devServer: {
+    client: {
+      overlay: false,
+    },
+
     static: {
       directory: path.join(__dirname, 'dist'),
     },
