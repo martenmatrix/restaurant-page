@@ -1,8 +1,8 @@
 const products = [
     {
-        title: '',
+        title: 'Pizza',
         image: '',
-        description: '',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, voluptate.',
     },
 ];
 

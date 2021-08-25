@@ -1,4 +1,5 @@
 import imageOfRestaurant from './img/pizza-horizontal.jpg';
+import products from './products';
 
 const createPage = (function () {
 
@@ -70,6 +71,24 @@ const createPage = (function () {
     };
 
     function foodMenu() {
+        const productSection = document.createElement('div');
+        productSection.classList.add('products');
+        deleteSection.appendChild(productSection);
+
+        products.forEach(product => {
+            const title = document.createElement('h1');
+            title.textContent = product.title;
+            productSection.appendChild(title);
+
+            const image = document.createElement('img');
+            image.src = product.image;
+            productSection.appendChild(image);
+
+            const description = document.createElement('p');
+            description.textContent = product.description;
+            productSection.appendChild(description);
+        });
+
 
     };
 
