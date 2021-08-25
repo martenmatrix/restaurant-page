@@ -67,6 +67,7 @@ button:hover {
 
     padding-right: 2rem;
     flex-grow: 1;
+    height: 100vh;
 }
 
 .right-part img{
@@ -74,8 +75,46 @@ button:hover {
     width: 70vh;
 }
 
-@media only screen and (min-width: 800px) {
-    .left-part {
-        padding: 10rem;
+.left-part * {
+    margin-left: 5rem;
+}
+
+.left-part p {
+    width: 50%;
+}
+
+@media only screen and (max-width: 1000px) {
+    .right-part img {
+        display: none;
     }
+
+    .left-part {
+        padding: 1rem;
+    }
+}
+
+
+/*Menu*/
+#menu {
+    list-style: none;
+    padding: 0;
+
+    display: flex;
+
+    position: absolute;
+
+    margin-top: 70vh;
+    left: 10%;
+}
+
+#menu li {
+    padding: 2em;
+    cursor: pointer;
+    
+    font-family: 'Roboto';
+    color: white;
+}
+
+#menu li:hover {
+    opacity: 80%;
 }

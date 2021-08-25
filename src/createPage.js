@@ -21,6 +21,18 @@ const createPage = (function () {
     image.src = imageOfRestaurant;
     image.type = 'img/jpg';
     rightPart.appendChild(image);
+
+    //create menu
+    const menu = document.createElement('ul');
+    menu.id = 'menu';
+    const menuSections = ['Home', 'About', 'Menu'];
+
+    menuSections.forEach(section => {
+        const sectionToCreate = document.createElement('li');
+        sectionToCreate.textContent = section;
+        menu.appendChild(sectionToCreate);
+    });
+    leftPart.appendChild(menu);
     
     function homepage() {
 
