@@ -105,8 +105,7 @@ const createPage = (function () {
     function deleteLeftPart() {
         deleteSection.textContent = '';
     };
-
-
+    
     return {homepage, foodMenu, contact, deleteLeftPart};
 })();
 
