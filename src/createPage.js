@@ -76,17 +76,21 @@ const createPage = (function () {
         deleteSection.appendChild(productSection);
 
         products.forEach(product => {
+            const productDiv = document.createElement('div');
+            productDiv.classList.add('product');
+            productSection.appendChild(productDiv);
+
             const title = document.createElement('h1');
             title.textContent = product.title;
-            productSection.appendChild(title);
+            productDiv.appendChild(title);
 
             const image = document.createElement('img');
             image.src = product.image;
-            productSection.appendChild(image);
+            productDiv.appendChild(image);
 
             const description = document.createElement('p');
             description.textContent = product.description;
-            productSection.appendChild(description);
+            productDiv.appendChild(description);
         });
 
 

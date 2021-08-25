@@ -78,10 +78,6 @@ button:hover {
     width: 70vh;
 }
 
-.left-part * {
-    margin-left: 5rem;
-}
-
 .left-part p {
     width: 50%;
 }
