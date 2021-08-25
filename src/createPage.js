@@ -1,4 +1,6 @@
 import imageOfRestaurant from './img/pizza-horizontal.jpg';
+import locationImage from './img/location.png'
+
 import products from './products';
 
 const createPage = (function () {
@@ -62,14 +64,6 @@ const createPage = (function () {
         about.appendChild(rightPart);
     };
 
-    function deleteLeftPart() {
-        deleteSection.textContent = '';
-    };
-
-    function contact() {
-
-    };
-
     function foodMenu() {
         const productSection = document.createElement('div');
         productSection.classList.add('products');
@@ -92,11 +86,27 @@ const createPage = (function () {
             description.textContent = product.description;
             productDiv.appendChild(description);
         });
-
-
     };
 
-    return {homepage, contact, foodMenu, deleteLeftPart};
+    function contact() {
+        const mainDiv = document.createElement('div');
+        mainDiv.classList.add('contact');
+        deleteSection.appendChild(mainDiv);
+
+        const map = document.createElement('img');
+        map.src = locationImage;
+        mainDiv.appendChild(map);
+
+        const telNumber = document.createElement('p');
+        telNumber.textContent = '☎ +123 4567890'
+    };
+    
+    function deleteLeftPart() {
+        deleteSection.textContent = '';
+    };
+
+
+    return {homepage, foodMenu, contact, deleteLeftPart};
 })();
 
 export default createPage;
