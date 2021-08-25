@@ -118,3 +118,7 @@ button:hover {
 #menu li:hover {
     opacity: 80%;
 }
+
+.underline {
+    text-decoration: underline;
+}

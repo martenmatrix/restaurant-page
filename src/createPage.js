@@ -27,33 +27,45 @@ const createPage = (function () {
     menu.id = 'menu';
     const menuSections = ['Home', 'About', 'Menu'];
 
-    menuSections.forEach(section => {
+    menuSections.forEach((section, index) => {
         const sectionToCreate = document.createElement('li');
         sectionToCreate.textContent = section;
         menu.appendChild(sectionToCreate);
+
+        //underline first element because it is the first page
+        if (index === 0) sectionToCreate.classList.add('underline');
     });
     leftPart.appendChild(menu);
+
+    //create deletable section
+    const deleteSection = document.createElement('div');
+    deleteSection.id = 'delete';
+    leftPart.appendChild(deleteSection);
     
     function homepage() {
 
         const header = document.createElement('h1');
         header.textContent = "Marten's Pizza Restaurant";
-        leftPart.appendChild(header);
+        deleteSection.appendChild(header);
 
         const paragraph = document.createElement('p');
         paragraph.classList.add('description');
         paragraph.textContent = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ducimus voluptates numquam est aperiam expedita molestias, ipsam eaque itaque fugit aliquid! Sed similique deserunt expedita ea repellendus corporis. Veritatis, quaerat.';
-        leftPart.appendChild(paragraph);
+        deleteSection.appendChild(paragraph);
 
         const button = document.createElement('button');
         button.textContent = 'Book now';
-        leftPart.appendChild(button);
+        deleteSection.appendChild(button);
 
         about.appendChild(leftPart);
         about.appendChild(rightPart);
     };
 
-    return {homepage};
+    function deleteLeftPart() {
+        deleteSection.textContent = '';
+    };
+
+    return {homepage, deleteLeftPart};
 })();
 
 export default createPage;
