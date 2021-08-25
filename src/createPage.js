@@ -98,7 +98,8 @@ const createPage = (function () {
         mainDiv.appendChild(map);
 
         const telNumber = document.createElement('p');
-        telNumber.textContent = '☎ +123 4567890'
+        telNumber.textContent = '☎ +123 4567890';
+        mainDiv.appendChild(telNumber);
     };
     
     function deleteLeftPart() {
